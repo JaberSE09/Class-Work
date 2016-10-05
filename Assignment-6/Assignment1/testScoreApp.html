@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <title>Test Score App</title>
+	<link rel="stylesheet" href="css/score.css">
+ 	
+			<script>
+			var click = function(){
+			  var grade1 = document.getElementById('score1').value;
+			  grade1 = parseFloat(grade1);
+			  var grade2 = document.getElementById('score2').value;
+			  grade2 = parseFloat(grade2);
+              var grade3 = document.getElementById('score3').value;
+			 grade3 = parseFloat(grade3);
+          if (isNaN(grade1) || isNaN(grade2) || isNaN(grade3)) {
+                alert("all entries must be valid");
+            } 
+			else if( (grade1<0) || (grade1>100) || (grade2<0) || (grade2>100) || (grade3<0) || (grade3>100)){
+			                alert("all entries must be between 0 and 100");
+			
+			}
+			else {
+				 document.getElementById('scoreTotal').value = (grade1+grade2+grade3).toFixed(2);
+                 document.getElementById("scoreAvg").value = ((grade1+grade2+grade3)/3).toFixed(2);
+            }
+};
+         window.onload = function() {
+			document.getElementById("calculate").onclick = click;
+			document.getElementById("score1").focus();
+
+        };
+	 </script>	
+</head>
+<body>
+	<main>
+		<h2>The Test Scores App</h2>
+		<label for="score1">Enter 1st test score:</label>
+		<input type='text' id='score1'/><br>
+		<label for="score2">Enter 2nd test score:</label>
+		<input type='text' id='score2'/><br>
+		<label for="score3">Enter 3rd test score:</label>
+		<input type="text" id='score3'/><br>
+		<label for="scoreTotal">Total Score:</label>
+		<input type="text" id="scoreTotal" disabled><br>
+		<label for="scoreAvg">Average Score:</label>
+		<input type="text" id="scoreAvg" disabled><br>
+		<label>&nbsp;</label>
+		<input type="button" id="calculate" value="Calculate">
+	</main>
+    <p>Thanks for using the Test Scores Application!</p>
+</body>
+</html>

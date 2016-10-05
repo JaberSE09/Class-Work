@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">	
+    <title>Test Score App</title>
+	<link rel="stylesheet" href="score.css">
+    
+	<script src="score.js"></script>
+</head>
+<body>
+	<main>
+		<h2>The Test Scores App</h2>
+		<img src="teacher.png" id="teacher" alt="teacher" width="177" height="277"/>
+		<label for="score1">Test-1:</label>
+		<input type='text' id='score1'/>
+		<span id="score1_error">&nbsp;</span><br>
+		<label for="score2">Test-2:</label>
+		<input type='text' id='score2'/>
+		<span id="score2_error">&nbsp;</span><br>
+		<label for="score3">Test-3:</label>
+		<input type="text" id='score3'/>
+		<span id="score3_error">&nbsp;</span><br>
+		<label for="scoreTotal">Total Points:</label>
+		<input type="text" id="scoreTotal" disabled><br>
+		<label for="scoreFinal">Final Grade:</label>
+		<input type="text" id="scoreFinal" disabled><br>
+		<label>&nbsp;</label>
+		<input type="button" id="calculate" value="Calculate">
+	</main>
+    <p>Thanks for using the Test Scores Application!</p>
+</body>
+</html>
